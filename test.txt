@@ -1,0 +1,242 @@
+Start of Basic Test
+
+Distance between allocation 0 and 1 is 16
+Size Recorded: 16
+Allocation 0 is 8-byte aligned
+Distance between allocation 1 and 2 is 24
+Size Recorded: 24
+Allocation 1 is 8-byte aligned
+Distance between allocation 2 and 3 is 32
+Size Recorded: 32
+Allocation 2 is 8-byte aligned
+Distance between allocation 3 and 4 is 64
+Size Recorded: 64
+Allocation 3 is 8-byte aligned
+Distance between allocation 4 and 5 is 16
+Size Recorded: 16
+Allocation 4 is 8-byte aligned
+Distance between allocation 5 and 6 is 40
+Size Recorded: 40
+Allocation 5 is 8-byte aligned
+
+End of Basic Test
+
+Start of Free Test
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0xd0
+Size of free chunk: 7984
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0xd0
+Size of free chunk: 7984
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0xd0
+Size of free chunk: 7984
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0xc0
+Size of free chunk: 16
+Next node at: 0xd0
+Size of free chunk: 7984
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0x88
+Size of free chunk: 16
+Next node at: 0xc0
+Size of free chunk: 16
+Next node at: 0xd0
+Size of free chunk: 7984
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0x88
+Size of free chunk: 16
+Next node at: 0x98
+Size of free chunk: 40
+Next node at: 0xc0
+Size of free chunk: 16
+Next node at: 0xd0
+Size of free chunk: 7984
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0x48
+Size of free chunk: 64
+Next node at: 0x88
+Size of free chunk: 16
+Next node at: 0x98
+Size of free chunk: 40
+Next node at: 0xc0
+Size of free chunk: 16
+Next node at: 0xd0
+Size of free chunk: 7984
+
+
+End of Free Test
+
+Start of Reclaim Test
+
+First node at: 0x0
+Size of free chunk: 16
+Next node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0x88
+Size of free chunk: 16
+Next node at: 0xc0
+Size of free chunk: 16
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x98
+Size of free chunk: 40
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0xa8
+Size of free chunk: 24
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x1a0
+Size of free chunk: 7776
+
+
+End of Reclaim Test
+
+Start of Internal Fragmentation Test
+
+Size Recorded: 64
+First node at: 0x1a0
+Size of free chunk: 7776
+
+
+End of Internal Fragmentation Test
+
+Start of Coalescing Test
+
+First node at: 0x10
+Size of free chunk: 24
+Next node at: 0x28
+Size of free chunk: 32
+Next node at: 0x88
+Size of free chunk: 16
+Next node at: 0x98
+Size of free chunk: 16
+Next node at: 0xa8
+Size of free chunk: 24
+Next node at: 0xc0
+Size of free chunk: 16
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x10
+Size of free chunk: 56
+Next node at: 0x88
+Size of free chunk: 72
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x0
+Size of free chunk: 208
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x0
+Size of free chunk: 208
+Next node at: 0xd0
+Size of free chunk: 208
+Next node at: 0x1a0
+Size of free chunk: 7776
+
+First node at: 0x0
+Size of free chunk: 8192
+
+
+End of Coalescing Test
+
+Start of Large Allocation Test
+
+Size Recorded: 10016
+First node at: 0x0
+Size of free chunk: 8192
+
+First node at: 0x0
+Size of free chunk: 8192
+Next node at: 0x2000
+Size of free chunk: 10016
+
+First node at: 0x0
+Size of free chunk: 18208
+
+
+End of Large Allocation Test
+
+Start of Magic Number Test
+
+Value of errno: 0
+Value of errno: 2
+First node at: 0x0
+Size of free chunk: 18208
+
+Value of errno: 2
+First node at: 0x18
+Size of free chunk: 18184
+
+First node at: 0x0
+Size of free chunk: 24
+Next node at: 0x18
+Size of free chunk: 18184
+
+
+End of Magic Number Test
+
+Start of Direct SBRK Call Test
+
+First node at: 0x0
+Size of free chunk: 24
+Next node at: 0x18
+Size of free chunk: 18184
+Next node at: 0x4b20
+Size of free chunk: 20008
+
+First node at: 0x0
+Size of free chunk: 18208
+Next node at: 0x4b20
+Size of free chunk: 20008
+
+
+End of Direct SBRK Call Test
